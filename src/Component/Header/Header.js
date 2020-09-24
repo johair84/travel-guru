@@ -7,15 +7,13 @@ import logo from '../../images/Logo.png';
 const Header = () => {
     return (
       <div>
-      <Container  >
+      <Container>
       <Navbar expand="lg" >
       <Navbar.Brand href="#home" >
-      <img
-        src={logo}
-        width="100"
-        height="50"
-        alt="traval guru"
-      />
+      <div>
+        <img src={logo} alt="travel guru" className="logo"/>
+      </div>
+      
       </Navbar.Brand>
 
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
