@@ -29,11 +29,11 @@ function Login() {
 
   const handleFbSignIn = () =>{
     firebase.auth().signInWithPopup(fbProvider).then(function(result) {
-      // This gives you a Facebook Access Token. You can use it to access the Facebook API.
-      var token = result.credential.accessToken;
-      // The signed-in user info.
-      var user = result.user;
-      console.log('fb user after sign in',user);
+        const {displayName, name} = result.user;
+        const SignedInUser = {name: displayName}
+        setLoggedInUser(SignedInUser);
+        console.log('fb user after sign in',user);
+        history.replace(from);
       // ...
     }).catch(function(error) {
       // Handle Errors here.
