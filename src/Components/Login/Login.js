@@ -29,7 +29,7 @@ function Login() {
 
   const handleFbSignIn = () =>{
     firebase.auth().signInWithPopup(fbProvider).then(function(result) {
-        const {displayName, name} = result.user;
+        const {displayName} = result.user;
         const SignedInUser = {name: displayName}
         setLoggedInUser(SignedInUser);
         console.log('fb user after sign in',user);
@@ -162,11 +162,6 @@ function Login() {
   }
   return (
     <div style={{textAlign: 'center'}}>
-     
-   
-        
-        
-      
       <br/>
       <button class="btn btn-warning" onClick={handleGoogleSignIn}>Google Sign In</button>
       <br/>
@@ -174,13 +169,14 @@ function Login() {
       <button class="btn btn-warning" onClick={handleFbSignIn}>Sign in using Facebook</button>
      
 
-      <h1>Our Own Authentication</h1>
+      <h1>Sign in With Email</h1>
       <input type="checkbox" onChange={()=> setNewUser(!newUser)} name="newUser" id=""/>
       <label htmlFor="newUser">New User Sign Up</label>
       <form onSubmit={handleSubmit}>
       {newUser && <input type="text" onBlur={handleBlur} name="name" placeholder="Your Name" />}
       <br/>
-      <input type="text" name="email" onBlur={handleBlur} placeholder="Your Email address" required/>
+      <br/>
+      <input type="text" name="email" onBlur={handleBlur} placeholder="Your Email address"  required/>
       <br/>
       <br/>
       <input type="password" onBlur={handleBlur} name="password" placeholder="Your password" required/>

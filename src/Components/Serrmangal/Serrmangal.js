@@ -13,14 +13,14 @@ const Serrmangal = () => {
             <div className="dateSlection">
                 
                 <p>Form</p>
-                <input type="date"></input>
+                <input class="form-control" type="date"></input>
                 <br/>
                 <br/>
                 <p>To</p>
-                <input type="date"></input>
+                <input class="form-control" type="date"></input>
                 <br/>
                 <br/>
-                <Link to="/selectRoom"><button>start Booking</button></Link>
+                <Link to="/selectRoom"><button class="btn btn-warning">Start Booking</button></Link>
             </div>
         </div>
     );

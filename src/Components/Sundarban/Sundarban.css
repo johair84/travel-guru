@@ -8,8 +8,9 @@
 }
 
 .dateSlection{
-    border:2px solid;
-    padding: 10px;
+    border: none;
+    padding: 50px;
     margin: 40px;
-    
+    border-radius: 5px;
+    background-color:#edebdd;   
 }
