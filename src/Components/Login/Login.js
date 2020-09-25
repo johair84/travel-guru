@@ -168,8 +168,10 @@ function Login() {
         
       
       <br/>
-      <button onClick={handleGoogleSignIn}>Google Sign In</button>
-      <button onClick={handleFbSignIn}>sign in using Facebook</button>
+      <button class="btn btn-warning" onClick={handleGoogleSignIn}>Google Sign In</button>
+      <br/>
+      <br/>
+      <button class="btn btn-warning" onClick={handleFbSignIn}>Sign in using Facebook</button>
      
 
       <h1>Our Own Authentication</h1>
@@ -180,9 +182,11 @@ function Login() {
       <br/>
       <input type="text" name="email" onBlur={handleBlur} placeholder="Your Email address" required/>
       <br/>
+      <br/>
       <input type="password" onBlur={handleBlur} name="password" placeholder="Your password" required/>
       <br/>
-      <input type="submit" value={newUser ? 'Sign Up' : 'Sign In'}/>
+      <br/>
+      <input class="btn btn-warning" type="submit" value={newUser ? 'Sign Up' : 'Sign In'}/>
       </form>
     <p style={{color:'red'}}>{user.error}</p>
     {user.success && <p style={{color:'green'}}>User {newUser ? 'Created': 'Logged In'} Sucessfully</p>}

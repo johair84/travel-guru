@@ -1,16 +1,29 @@
 img{
     height: 300px;
-    padding: 15px;
+    
+   
 }
 
 .tourPlace-container{
     display: flex;
+    padding: 20px;
+    
 
 }
 
 .place-details-container{
-    width: 30%;
-    margin-left: 20px;
-    margin-right: 5px;
+    width: 40%;
+    margin: 10px;
+    
+    
 
+}
+
+.imageCard:hover{
+    background-color: yellow;
+    border-radius: 10px;
+}
+
+.imageCard{
+   padding: 5px;
 }
